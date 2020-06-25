@@ -1,0 +1,10 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Summary ","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"In the above sections, several assessment metrics/tests were calculated to assess the predictive ability of the credit rating model associated with a credit score card. Here is the summary of the metrics/tests calculated:"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.displaySummary;"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

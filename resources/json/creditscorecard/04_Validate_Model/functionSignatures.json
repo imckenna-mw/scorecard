@@ -1,0 +1,205 @@
+{
+  "_schemaVersion": "1.0.0",
+  "begin_model_validation":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"scores", "kind":"required", "type":[""]},
+        {"name":"defaultProbs", "kind":"required", "type":[""]},
+        {"name":"defaultIndicators", "kind":"required", "type":[""]}
+     ]     
+  },
+  "cumulative_accuracy_profile":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"Stats", "kind":"required", "type":[""]},
+        {"name":"T", "kind":"required", "type":[""]}
+     ]     
+  },
+  "receiver_operating_characteristic":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"Stats", "kind":"required", "type":[""]},
+        {"name":"T", "kind":"required", "type":[""]}
+     ]     
+  },
+  "kolmogorov_smirnov_statistic":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"Stats", "kind":"required", "type":[""]},
+        {"name":"T", "kind":"required", "type":[""]}
+     ]     
+  },
+  "mann_whitney_intervals":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"U", "kind":"required", "type":[""]},
+        {"name":"confidenceInterval", "kind":"required", "type":[""]}
+     ]     
+  },
+  "bayesian_error_rate":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"error_rate", "kind":"required", "type":[""]},
+        {"name":"error_rate_score", "kind":"required", "type":[""]}
+     ]     
+  },
+  "entropy_measures":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"uncondEntropy", "kind":"required", "type":[""]},
+        {"name":"condEntropy", "kind":"required", "type":[""]},
+        {"name":"CIERs", "kind":"required", "type":[""]}
+     ]     
+  },
+  "kendalls_tau_somers_d":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"somers_d", "kind":"required", "type":[""]}
+     ]     
+  },
+  "brier_score":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"model_score", "kind":"required", "type":[""]},
+        {"name":"trivial_score", "kind":"required", "type":[""]}
+     ]     
+  },
+  "binomial_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"criticalK_table", "kind":"required", "type":[""]}
+     ]     
+  },
+  "hosmer_lemeshow_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"Tk", "kind":"required", "type":[""]},
+        {"name":"pChi2", "kind":"required", "type":[""]}
+     ]     
+  },
+  "pietra_index":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"pietraMetric", "kind":"required", "type":[""]}
+     ]     
+  },
+  "summary_scriptlet":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"", "kind":"required", "type":[""]}
+     ]     
+  },
+  "normal_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"hNormalTest", "kind":"required", "type":[""]},
+        {"name":"rejectValue", "kind":"required", "type":[""]}
+     ]     
+  },
+  "prepare_data_normal_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"observed_pd", "kind":"required", "type":[""]},
+        {"name":"forecast_pd", "kind":"required", "type":[""]}
+     ]     
+  },
+  "traffic_lights_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"hTrafficLightsTest", "kind":"required", "type":[""]}
+     ]     
+  },
+  "prepare_data_traffic_lights_test":
+  {
+     "inputs":
+     [
+        {"name":"sc", "kind":"required", "type":["creditscorecard"]}
+     ],
+     "outputs":
+     [
+        {"name":"numDefaults", "kind":"required", "type":[""]},
+        {"name":"totalObligors", "kind":"required", "type":[""]},
+        {"name":"probDefault", "kind":"required", "type":[""]}
+     ]     
+  }            
+}

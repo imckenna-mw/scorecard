@@ -1,0 +1,10 @@
+[
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Publish the model to the Model Review Environment"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"project = currentProject;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"startModelReview(project.RootFolder,'HEAD','master')"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"RichTextParagraphNode","align":"left","children":[]},
+{"className":"RichTextParagraphNode","align":"left","children":[]}]

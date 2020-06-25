@@ -1,0 +1,18 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Receiver Operating Characteristic (ROC)"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Receiver Operating Characteristic curve is used to identify the diagnostic ability of a rating system as a function of the score \"s\"."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"To find the receiver operating characteristic (ROC) curve, the proportion of defaulters up to a given score \"s\" is computed. This proportion is known as the true positive rate (TPR). Additionally, the proportion of non-defaulters up to score \"s\" or \"False Alarm Rate\" is also computed. This proportion is also known as the False Positive Rate (FPR). The ROC curve is the plot of the \"True Positive Rate\" vs. the \"False Alarm Rate\". Computing the ROC curve is similar to computing the equivalent of a confusion matrix at each score level. The closer the area under ROC curve is to unity, the better the rating model. "}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"ROCMetric = mrm.data.validation.pd.AUROC(defaultIndicators, scores);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"ROCMetric.visualize;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"ROCMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(ROCMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

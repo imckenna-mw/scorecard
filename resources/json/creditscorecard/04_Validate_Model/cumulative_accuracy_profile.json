@@ -1,0 +1,37 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Cumulative Accuracy Profile (CAP)","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"CAP of a model represents the cumulative number of defaulters along the y-axis versus the corresponding cumulative number of all borrowers along the x-axis. "}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"The scores of given observations are sorted (in ascending order) from riskiest to safest. For a given fraction"},
+{"className":"RichTextNode","text":" "},
+{"className":"RichTextNode","text":"M","monospace":true},
+{"className":"RichTextNode","text":" "},
+{"className":"RichTextNode","text":"of the total borrowers, the height of the CAP curve is the fraction of defaulters whose scores are less than or equal to the maximum score of the fraction"},
+{"className":"RichTextNode","text":" "},
+{"className":"RichTextNode","text":"M","monospace":true},
+{"className":"RichTextNode","text":"."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"A perfect rating model will assign the lowest scores to the defaulters. On the other hand, a random model without any discriminative power would assign scores randomly and therefore fraction "},
+{"className":"RichTextNode","text":"x","italic":true},
+{"className":"RichTextNode","text":" of all debtors with lowest rating scores will contain "},
+{"className":"RichTextNode","text":"x","italic":true},
+{"className":"RichTextNode","text":" percent of all defaulters. CAP curve of rating systems calibrated to work with real data would lie somewhere in between. The quality of a rating system is measured by the Accuracy Ratio (AR). It is defined as:"}]},
+{"className":"RichTextParagraphNode","align":"center","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi mathvariant=\"normal\">Accuracy</mi><mtext> </mtext><mi mathvariant=\"normal\">Ratio</mi><mtext> </mtext><mrow><mo>(</mo><mrow><mi mathvariant=\"italic\">AR</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi mathvariant=\"normal\">Area</mi><mtext> </mtext><mi mathvariant=\"normal\">between</mi><mtext> </mtext><mi mathvariant=\"normal\">CAP</mi><mtext> </mtext><mi mathvariant=\"normal\">curve</mi><mtext> </mtext><mi mathvariant=\"normal\">of</mi><mtext> </mtext><mi mathvariant=\"normal\">rating</mi><mtext> </mtext><mi mathvariant=\"normal\">model</mi><mtext> </mtext><mi mathvariant=\"normal\">being</mi><mtext> </mtext><mi mathvariant=\"normal\">validated</mi><mtext> </mtext><mo>&amp;</mo><mtext> </mtext><mi mathvariant=\"normal\">CAP</mi><mtext> </mtext><mi mathvariant=\"normal\">curve</mi><mtext> </mtext><mi mathvariant=\"normal\">of</mi><mtext> </mtext><mi mathvariant=\"normal\">the</mi><mtext> </mtext><mi mathvariant=\"normal\">random</mi><mtext> </mtext><mi mathvariant=\"normal\">model</mi></mrow><mrow><mi mathvariant=\"normal\">Area</mi><mtext> </mtext><mi mathvariant=\"normal\">between</mi><mtext> </mtext><mi mathvariant=\"normal\">CAP</mi><mtext> </mtext><mi mathvariant=\"normal\">curve</mi><mtext> </mtext><mi mathvariant=\"normal\">of</mi><mtext> </mtext><mi mathvariant=\"normal\">perfect</mi><mtext> </mtext><mi mathvariant=\"normal\">rating</mi><mtext> </mtext><mi mathvariant=\"normal\">model</mi><mtext> </mtext><mo>&amp;</mo><mtext> </mtext><mi mathvariant=\"normal\">CAP</mi><mtext> </mtext><mi mathvariant=\"normal\">curve</mi><mtext> </mtext><mi mathvariant=\"normal\">of</mi><mtext> </mtext><mi mathvariant=\"normal\">the</mi><mtext> </mtext><mi mathvariant=\"normal\">random</mi><mtext> </mtext><mi mathvariant=\"normal\">model</mi></mrow></mfrac></mrow></math>","displayStyle":true,"texString":"\\textrm{Accuracy}\\;\\textrm{Ratio}\\;\\left(\\textrm{AR}\\right)=\\frac{\\textrm{Area}\\;\\textrm{between}\\;\\textrm{CAP}\\;\\textrm{curve}\\;\\textrm{of}\\;\\textrm{rating}\\;\\textrm{model}\\;\\textrm{being}\\;\\textrm{validated}\\;\\&\\;\\textrm{CAP}\\;\\textrm{curve}\\;\\textrm{of}\\;\\textrm{the}\\;\\textrm{random}\\;\\textrm{model}}{\\textrm{Area}\\;\\textrm{between}\\;\\textrm{CAP}\\;\\textrm{curve}\\;\\textrm{of}\\;\\textrm{perfect}\\;\\textrm{rating}\\;\\textrm{model}\\;\\&\\;\\textrm{CAP}\\;\\textrm{curve}\\;\\textrm{of}\\;\\textrm{the}\\;\\textrm{random}\\;\\textrm{model}}"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"The closer to unity "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"italic\">AR</mi></math>","displayStyle":false,"texString":"\\textrm{AR}"},
+{"className":"RichTextNode","text":" is, the better the scoring model."}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"CAPMetric = mrm.data.validation.pd.CAPAccuracyRatio(defaultIndicators, scores);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"CAPMetric.visualize;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"CAPMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(CAPMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

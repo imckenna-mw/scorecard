@@ -1,0 +1,18 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Pietra Index","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Pietra Index is defined as twice the maximal area of a triangle that can be fitted between the ROC curve of the model and the diagonal of the unit square. The multiplication by 2 ensures that the range of possible values for the index is [0,1]. The closer the Pietra index is to unity, the better the rating model."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Pietra index is calculated under the assumption that the area under the ROC is convex. In this case the Pietra Index matches the Kolmogorov-Smirnov statistic indicated by the vertical dotted line in the plot."}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"PietraMetric = mrm.data.validation.pd.PietraIndex(defaultIndicators, scores);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"PietraMetric.visualize;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"PietraMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(PietraMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]
