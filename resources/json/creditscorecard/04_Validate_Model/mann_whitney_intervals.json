@@ -1,0 +1,51 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Mann-Whitney ","bold":true},
+{"className":"RichTextNode","text":"U","bold":true,"italic":true},
+{"className":"RichTextNode","text":" Test ","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Mann-Whitney "},
+{"className":"RichTextNode","text":"U","italic":true},
+{"className":"RichTextNode","text":" test is a simple method of calculating confidence intervals for A, the area under the ROC curve. It is a non parametric test that compares defaulters and non-defaulters. The U-test of Mann-Whitney relates to this interpretation. Let D denote a defaulter and ND denote a non-defaulter, then "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">u</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mo>,</mo><mi mathvariant=\"normal\">ND</mi></mrow></msub></math>","displayStyle":false,"texString":"u_{D,\\textrm{ND}}"},
+{"className":"RichTextNode","text":" is calculated as:   "}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mrow><mi mathvariant=\"italic\">u</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mo>,</mo><mi mathvariant=\"normal\">ND</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnalign=\"left\"><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mi mathvariant=\"normal\">if</mi><mtext> </mtext><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi></mrow></msub><mo>&lt;</mo><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi></mrow></msub><mtext> </mtext></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mi mathvariant=\"normal\">if</mi><mtext> </mtext><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi></mrow></msub><mo>≥</mo><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi></mrow></msub></mrow></mtd></mtr></mtable></mrow></mrow></math>","displayStyle":true,"texString":"u_{D,\\textrm{ND}} =\\left\\lbrace \\begin{array}{ll}\n1 & \\textrm{if}\\;s_D <s_{\\textrm{ND}} \\;\\\\\n0 & \\textrm{if}\\;s_D \\ge s_{\\textrm{ND}} \n\\end{array}\\right."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"where "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi></mrow></msub></math>","displayStyle":false,"texString":"s_D"},
+{"className":"RichTextNode","text":" is the score of the defaulter and "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msub><mrow><mi mathvariant=\"italic\">s</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi></mrow></msub></mrow></math>","displayStyle":false,"texString":"s_{\\textrm{ND}}"},
+{"className":"RichTextNode","text":" is the score of the non-defaulter"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"The test statistic"},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi mathvariant=\"italic\">Û</mi></mrow></math>","displayStyle":false,"texString":"Û"},
+{"className":"RichTextNode","text":" of Mann-Whitney is defined as:"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi mathvariant=\"italic\">Û</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mtext> </mtext></mrow></msub><mo>.</mo><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi></mrow></msub></mrow></mfrac><mtext> </mtext><mrow><munderover accent=\"false\" accentunder=\"false\"><mrow><mo>∑</mo></mrow><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mtext> </mtext></mrow></msub><mo>,</mo><msub><mrow><mtext> </mtext><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi><mtext> </mtext></mrow></msub></mrow></munderover><mrow><msub><mrow><mi mathvariant=\"italic\">u</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mo>,</mo><mi mathvariant=\"normal\">ND</mi></mrow></msub></mrow></mrow></mrow></math>","displayStyle":true,"texString":"Û=\\frac{1}{N_{D\\;} \\ldotp N_{\\textrm{ND}} }\\;\\sum_1^{N_{D\\;} ,{\\;N}_{\\textrm{ND}\\;} } u_{D,\\textrm{ND}}"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"where "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mtext> </mtext></mrow></msub></math>","displayStyle":false,"texString":"N_{D\\;}"},
+{"className":"RichTextNode","text":" is the number of defaulters and "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"normal\">ND</mi></mrow></msub></math>","displayStyle":false,"texString":"N_{\\textrm{ND}}"},
+{"className":"RichTextNode","text":" is the number of non-defaulters"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"italic\">Û</mi></math>","displayStyle":false,"texString":"Û"},
+{"className":"RichTextNode","text":" is an estimator of the Area under the ROC curve. Under the assumption that the sample is large ("},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi><mtext> </mtext></mrow></msub></math>","displayStyle":false,"texString":"N_{D\\;}"},
+{"className":"RichTextNode","text":"> 50), the distribution of standardized Area under the ROC curve is asymptotically normal with mean zero and standard deviation one. Thus allowing calculation of confidence intervals at confidence level "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"\\alpha\n"},
+{"className":"RichTextNode","text":" for "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"italic\">Û</mi></math>","displayStyle":false,"texString":"Û"},
+{"className":"RichTextNode","text":". If the confidence intervals calculated are significantly higher than that of a random rating model, i.e. 0.5, it suggests that the discriminative power of the model is statistically significant. "}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"alpha = 0.95; % confidence level"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MWMetric = mrm.data.validation.pd.MannWhitneyMetric(defaultIndicators, scores, alpha);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MWMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(MWMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

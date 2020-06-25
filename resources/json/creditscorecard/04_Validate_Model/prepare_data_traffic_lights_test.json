@@ -1,0 +1,97 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Read in data as a table and fit COX Survival Model"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"data = readtable(\"mortgage\\mortgage.csv\") ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData = groupsummary( data, \"id\", \"sum\", \"status_time\") ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData.Properties.VariableNames{2} = 'months' ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData.Properties.VariableNames{3} = 'Status' ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData.years = mortgageData.months / 12 ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData.defaulted = mortgageData.Status == 1 ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"mortgageData = removevars( mortgageData, [\"id\",\"Status\",\"months\"]) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"X = mortgageData{ :, 2 } ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"T = mortgageData{ :, 1 } ;"}]},
+{"className":"HeadingNode","align":"left","anchorId":"H_FA585D0F","level":3,"children":[
+{"className":"RichTextNode","text":"Forecast of Probability of Default"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"[ b, ~, H ] = coxphfit(X, T) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"tCox = H(:,1) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"hCox = H(:,2) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD = ( 1 - exp( -hCox * b .* tCox ) ) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD = array2table( horzcat( tCox, forecastPD ), \"VariableNames\", [\"tCox\",\"forecastPD\"] ) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD = groupsummary(forecastPD, \"tCox\", \"max\",\"forecastPD\" ) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD.Properties.VariableNames{3} = 'maxPD' ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD.forecastPD = vertcat( 0, diff( forecastPD.maxPD ) * 12 ) ;"}]},
+{"className":"HeadingNode","align":"left","anchorId":"H_DAAF7E50","level":3,"children":[
+{"className":"RichTextNode","text":"Observed Probability of Default "}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"numDefaults = groupsummary( mortgageData, \"years\", \"mean\", \"defaulted\" ) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"numDefaults.Properties.VariableNames{3} = 'observedPD' ; "}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":""}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"forecastPD.wholeYears = ceil( forecastPD.tCox ) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"trafficLightData = forecastPD(:, [5 2 3 4]) ; "}]},
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Getting "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">N</mi></mrow><mrow><mi mathvariant=\"italic\">t</mi></mrow></msub></math>","displayStyle":false,"texString":"N_t"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"Nt_table = groupsummary(trafficLightData,\"wholeYears\",\"sum\",\"GroupCount\") ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"Nt_table.Properties.VariableNames{3} = 'Nt' ;"}]},
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Getting "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">p</mi></mrow><mrow><mi mathvariant=\"italic\">t</mi></mrow></msub></math>","displayStyle":false,"texString":"p_t"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"pt_table = groupsummary(trafficLightData,\"wholeYears\",\"mean\",\"forecastPD\") ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"pt_table.Properties.VariableNames{3} = 'pt' ;"}]},
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Getting "},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"italic\">D</mi></mrow><mrow><mi mathvariant=\"italic\">t</mi></mrow></msub></math>","displayStyle":false,"texString":"D_t"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"historicData = mortgageData ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"historicData.wholeYears = ceil(historicData.years) ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"Dt_table = groupsummary(historicData,\"wholeYears\", \"sum\", \"defaulted\") ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"Dt_table.Properties.VariableNames{3} = 'Dt' ;"}]},
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Input Arguments for Traffic Lights Test"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"numDefaults = Dt_table.Dt ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"totalObligors = Nt_table.Nt ;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"probDefault = pt_table.pt ;"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

@@ -1,0 +1,55 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Entropy Measures","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Information Entropy is a measure of uncertainty eliminated by an experiment. The observation of an obligor over time in order to decide about her or his solvency status may be interpreted as such an experiment."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Unconditional entropy","underline":true},
+{"className":"RichTextNode","text":" is calculated as "}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":true,"texString":"H(p_D) = -(p_D*log(p_D) + (1-p_D)*log(1-p_D)))"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"where,"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"p_D"},
+{"className":"RichTextNode","text":" is the probability of default."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":""}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Conditional entropy","underline":true},
+{"className":"RichTextNode","text":" is calculated as"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":true,"texString":"H_{Sc} = -\\mathbb{E}_S[P(D|S)*\\log(P(D|S)) + (1-P(D|S))*\\log(1-P(D|S))]\n"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"where,"}]},
+{"className":"ListParagraph","type":"unordered","children":[
+{"className":"ListItem","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"\\mathbb{E}_S"},
+{"className":"RichTextNode","text":" is the expectation over scores and"}]},
+{"className":"ListItem","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"P(D|S)"},
+{"className":"RichTextNode","text":" is the probability of default for a given score "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"S"},
+{"className":"RichTextNode","text":"."}]}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"The difference between Unconditional Entropy and Conditional Entropy is defined as "},
+{"className":"RichTextNode","text":"Kullback-Leibler Distance","underline":true},
+{"className":"RichTextNode","text":"."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Since the range of values the Kullback-Leibler Distance can take depends on the unconditional entropy, the Kullback-Leibler Distance is normalized with the Unconditional Information Entropy. This is formalized as Conditional Information Entropy Ratio ("},
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"normal\">CIER</mi></mrow><mrow><mi mathvariant=\"italic\">S</mi></mrow></msub></math>","displayStyle":false,"texString":"{\\textrm{CIER}}_S"},
+{"className":"RichTextNode","text":")."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mrow><mi mathvariant=\"normal\">CIER</mi></mrow><mrow><mi mathvariant=\"italic\">S</mi></mrow></msub><mo>=</mo><mtext> </mtext><mfrac><mrow><mi mathvariant=\"italic\">H</mi><mrow><mo>(</mo><mrow><msub><mrow><mi mathvariant=\"italic\">p</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi></mrow></msub></mrow><mo>)</mo></mrow><mo>-</mo><msub><mrow><mi mathvariant=\"italic\">H</mi></mrow><mrow><mi mathvariant=\"normal\">Sc</mi></mrow></msub></mrow><mrow><mi mathvariant=\"italic\">H</mi><mrow><mo>(</mo><mrow><msub><mrow><mi mathvariant=\"italic\">p</mi></mrow><mrow><mi mathvariant=\"italic\">D</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math>","displayStyle":true,"texString":"{\\textrm{CIER}}_S =\\;\\frac{H\\left(p_D \\right)-H_{\\textrm{Sc}} }{H\\left(p_D \\right)}"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"EquationNode","text":"","encoding":"mathml","mathmlString":"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mrow><mi mathvariant=\"normal\">CIER</mi></mrow><mrow><mi mathvariant=\"italic\">S</mi></mrow></msub></math>","displayStyle":false,"texString":"{\\textrm{CIER}}_S"},
+{"className":"RichTextNode","text":" value close to zero indicates good separation of defaulting names from surviving names."}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"CIERMetric = mrm.data.validation.pd.EntropyMetric(defaultIndicators, scores);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"CIERMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(CIERMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

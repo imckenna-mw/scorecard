@@ -1,0 +1,66 @@
+[
+{"className":"HeadingNode","align":"left","level":3,"children":[
+{"className":"RichTextNode","text":"Binomial Test ","bold":true}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Binomial Test is a test of quality of estimates of probability of default. The idea is to understand if the deviations of estimates of probability of default are purely random or whether they occur systematically. A systematic underestimation of probability of default needs to critically assessed by validators. The binomial test works as follows:"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"      null hypothesis, H0:              the PD of a rating category is correct"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"      alternative hypothesis, H1:   the PD of a rating category is underestimated"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"For any given rating, there's a well-defined default probability "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"p"},
+{"className":"RichTextNode","text":". Supposing there are "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"n"},
+{"className":"RichTextNode","text":" names with this given rating, define "}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"    "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":true,"texString":"P_k = \\sum_{i = k}^n  {n \\choose i} p^i (1-p)^{n-i}."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"We then have "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"1 = P_0 > P_1 > .... > P_n = p^n"},
+{"className":"RichTextNode","text":", so that (at least if "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"p < 1"},
+{"className":"RichTextNode","text":" and "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"n"},
+{"className":"RichTextNode","text":" is large), we have a well defined critical value associated to the confidence level, "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"q"},
+{"className":"RichTextNode","text":", defined as"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"    "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":true,"texString":"k(q) = \\min \\{ k \\,| \\, P_k \\leq 1-q \\}."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"In other words, "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"k(q)"},
+{"className":"RichTextNode","text":" is the smallest number such that there occuring more than "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"k(q)"},
+{"className":"RichTextNode","text":" defaults in the rating set is less than "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"1-q"},
+{"className":"RichTextNode","text":". For example, if "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"q = 0.99"},
+{"className":"RichTextNode","text":", then the rating set should have more than "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"k(q)"},
+{"className":"RichTextNode","text":" defaults with probability less than "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"1\\%"},
+{"className":"RichTextNode","text":"."}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Note that if "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"n"},
+{"className":"RichTextNode","text":" is small, the minimal "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"P_k"},
+{"className":"RichTextNode","text":" , i.e. "},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"p^n"},
+{"className":"RichTextNode","text":", need not be very small, so there may not be enough data to have a meaningful test for this rating class. The closer the binomial test failure rate is to zero, the better the quality of the estimate."}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"q = 0.95;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"BinMetric = mrm.data.validation.pd.BinomialTest(defaultIndicators, defaultProbs, scores, q);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"BinMetric.displayResult;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"BinMetric.visualize;"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH.append(BinMetric);"}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]

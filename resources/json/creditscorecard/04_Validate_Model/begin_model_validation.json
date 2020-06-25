@@ -1,0 +1,41 @@
+[
+{"className":"HeadingNode","align":"left","anchorId":"H_84E5348E","level":2,"children":[
+{"className":"RichTextNode","text":"Assessment of Predictive Ability of Credit Rating Models","bold":true}]},
+{"className":"TableOfContentsContainer","children":[
+{"className":"TableOfContentsHeadingNode","align":"left","children":[
+{"className":"RichTextNode","text":"Table of Contents","bold":true}]},
+{"className":"TableOfContentsList","align":"left","children":[
+{"className":"HyperlinkNode","hyperlink":"internal:H_84E5348E","children":[
+{"className":"RichTextNode","text":"Assessment of Predictive Ability of Credit Rating Models"}]}]}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"Credit scoring is one of the most widely used credit risk analysis tools to rank borrowers by their credit worthiness. Credit scoring is performed using a credit scorecard. Credit scorecards model different characteristics of a customer (age, residential status, etc.), translate them into points and sum the points to compute the credit score. The credit score summarizes the credit worthiness of customers. High credit scores correspond to low-risk customers, and conversely. "}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"In order to assess the predictive ability of a credit scorecard there exists several statistical methodologies, which require the following:"}]},
+{"className":"ListParagraph","type":"ordered","children":[
+{"className":"ListItem","align":"left","children":[
+{"className":"RichTextNode","text":"scores associated to each name or observation in the credit scorecard ("},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"scores"},
+{"className":"RichTextNode","text":")"}]},
+{"className":"ListItem","align":"left","children":[
+{"className":"RichTextNode","text":"probability of default corresponding to each score ("},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"defaultProbs"},
+{"className":"RichTextNode","text":")"}]},
+{"className":"ListItem","align":"left","children":[
+{"className":"RichTextNode","text":"indicator variable to signal if an observation is a defaulter or otherwise ("},
+{"className":"EquationNode","text":"","encoding":"tex","mathmlString":"","displayStyle":false,"texString":"defaultIndicators"},
+{"className":"RichTextNode","text":")"}]}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"scores = score(sc);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"defaultProbs = probdefault(sc);"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"defaultIndicators = sc.Data.(sc.ResponseVar) ~= sc.GoodLabel;"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":" The subsequent sections each calculate one model validation metric in a self-contained manner. The results are stored in a collection object:"}]},
+{"className":"LineNode","children":[
+{"className":"PlainTextNode","text":"MH = mrm.data.validation.MetricsHandler;"}]},
+{"className":"RichTextParagraphNode","align":"left","children":[
+{"className":"RichTextNode","text":"and summarised at the end of the script."}]},
+{"className":"SectionBreak","children":[]},
+{"className":"LineNode","children":[]},
+{"className":"LineNode","children":[]}]
